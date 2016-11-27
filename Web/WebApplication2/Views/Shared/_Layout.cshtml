@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Gezginol</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    
+                </button>
+                @Html.ActionLink("Gezginol", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Sakarya Tarihi", "SakaryaTarihi", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Etkinlikler", "KültürelHaberler", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Cafeler", "cafeler", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Sinema", "Sinema", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Otel", "Oteller", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Sahaflar", "Sahaflar", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Giriş", "Giris", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Doğal Yerler", "Giris", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                
+            </div>
+            <div class="nav navbar-nav navbar-right col-md-4">
+                <div class="col-md-3">
+                    <div class="dropdown">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">TR <span class="caret"></span></button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <li><a href="#">EN</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="input-group">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">Ara</button>
+                        </span>
+                        <input type="text" class="form-control" placeholder="Arama...">
+                    </div>
+                </div>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+                <a  href="https://www.facebook.com/" target="_blank"><img src="~/Content/img/fb.jpg" height="30" alt="30"></a>
+                 <a  href="https://www.twitter.com/" target="_blank"><img src="~/Content/img/twit.png" height="30" alt="30"></a>
+                  <a  href="https://www.instagram.com/" target="_blank"><img src="~/Content/img/insta.png" height="30" alt="30"></a>
+            <center><p>Copyright &copy; Gezginol Ltd @DateTime.Now.Year Tüm hakları saklıdır</p></center>
+        </footer>
+    </div>
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    
+</body>
+</html>
